@@ -1,0 +1,50 @@
+# Farm
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **string** | Display name | [optional] 
+**timezone** | **string** | Time zone for all farm workers. Default is account&#39;s time zone. | [optional] 
+**gpu_red_temp** | **int** | Red Temperature for GPU workers, °C | [optional] 
+**asic_red_temp** | **int** | Red Temperature for ASIC workers, °C | [optional] 
+**asic_red_board_temp** | **float** | Red Board Temperature for ASIC workers, °C | [optional] 
+**gpu_red_mem_temp** | **float** | Red memory temperature for GPU workers, °C | [optional] 
+**gpu_red_cpu_temp** | **float** | Red CPU temperature for GPU workers, °C | [optional] 
+**gpu_red_fan** | **int** | Red Fan speed for GPU workers, % | [optional] 
+**asic_red_fan** | **int** | Red Fan speed for ASIC workers, % | [optional] 
+**gpu_red_asr** | **int** | Red Accepted Shares Ratio for GPU workers, % | [optional] 
+**asic_red_asr** | **int** | Red Accepted Shares Ratio for ASIC workers, % | [optional] 
+**gpu_red_la** | **float** | Red Load Average per one CPU core for GPU workers | [optional] 
+**asic_red_la** | **float** | Red Load Average per one CPU core for ASIC workers | [optional] 
+**repo_urls** | **string[]** | Package repository URL list. Use this to override default list. | [optional] 
+**power_price** | **float** | Electricity price per kilowatt hour | [optional] 
+**power_price_currency** | **string** | Currency of electricity price | [optional] 
+**charge_on_pool** | **bool** | Enable charging on brand pool | [optional] 
+**autocreate_hash** | **string** | Unique ID to be used for connecting new workers to the farm | [optional] 
+**nonfree** | **bool** | Paid features state | [optional] 
+**locked** | **bool** | Farm is locked due to exceeding overdraft limit | [optional] 
+**twofa_required** | **bool** | 2FA is required for update operations (if not owner) | [optional] 
+**trusted** | **bool** | Farm is trusted (if not owner) | [optional] 
+**owner** | **object** | Who owns the farm | [optional] 
+**payer** | **object** | Who pays for the farm. If not set - owner is the payer. | [optional] 
+**personal_settings** | **object** | Personal settings for current user | [optional] 
+**role** | [**\Swagger\Client\Model\AccessRoleEnum**](AccessRoleEnum.md) |  | [optional] 
+**workers_count** | **int** | Total amount of workers in farm | [optional] 
+**rigs_count** | **int** | Total amount of Rigs in farm | [optional] 
+**asics_count** | **int** | Total amount of ASICs in farm | [optional] 
+**disabled_rigs_count** | **int** | Amount of disabled Rigs in farm | [optional] 
+**disabled_asics_count** | **int** | Amount of disabled ASICs in farm | [optional] 
+**money** | **object** |  | [optional] 
+**stats** | [**\Swagger\Client\Model\FarmStats**](FarmStats.md) |  | [optional] 
+**hashrates** | **object[]** |  | [optional] 
+**hashrates_by_coin** | **object[]** | Summary hashrates per coin | [optional] 
+**tag_ids** | **int[]** |  | [optional] 
+**hardware_power_draw** | **int** | Power consumption of worker&#39;s hardware, watts | [optional] 
+**psu_efficiency** | **int** | Efficiency of power supply unit, % | [optional] 
+**octofan_correct_power** | **bool** | Apply power correction settings to power consumption value from Octominer fan controller. Default is false. | [optional] 
+**auto_tags** | **bool** | Auto-tags feature. If enabled - all workers inside the farm are automatically tagged. Rigs are tagged by GPU information such as model name, memory size, OEM, etc. ASICs are tagged by model name. | [optional] 
+**default_fs** | **map[string,int]** | Default flight sheets keyed by platform (1 - rig, 2 - asic). These flight sheets will be automatically attached to newly created workers. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
